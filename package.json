@@ -1,0 +1,30 @@
+{
+  "name": "sir-svg-sprite",
+  "version": "1.0.0",
+  "description": "A Webpack plugin that generates an SVG sprite",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "svg",
+    "sprite",
+    "optimization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sirSayed98/sir-svg-sprite"
+  },
+  "author": "sirSayed98",
+  "license": "MIT",
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "svgo": "^3.0.2",
+    "crypto": "1.0.1"
+  },
+  "peerDependencies": {
+    "webpack": "^4 || ^5"
+  }
+}
