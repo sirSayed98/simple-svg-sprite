@@ -1,6 +1,6 @@
 {
   "name": "sir-svg-sprite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Webpack plugin that generates an SVG sprite",
   "main": "src/index.js",
   "scripts": {
