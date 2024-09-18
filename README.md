@@ -1,4 +1,4 @@
-# sir-svg-sprite
+# simple-svg-sprite
 
 A Webpack plugin for creating an SVG sprite from individual SVG files.
 
@@ -12,27 +12,27 @@ A Webpack plugin for creating an SVG sprite from individual SVG files.
 
 ## Installation
 
-Install `sir-svg-sprite` using npm or yarn as a dev dependency:
+Install `simple-svg-sprite` using npm or yarn as a dev dependency:
 
 ```console
-npm install --save-dev sir-svg-sprite
+npm install --save-dev simple-svg-sprite
 ```
 OR
 ```console
-yarn add --dev sir-svg-sprite
+yarn add --dev simple-svg-sprite
 ```
 ## Usage
 
 Here's how to use the plugin in your Webpack configuration:
 ```console
 // import package 
-const { SirSVGSprite, GenerateSVGContentHash } = require('sir-svg-sprite');
+const { SimpleSVGSprite, GenerateSVGContentHash } = require('simple-svg-sprite');
 const svgContentHash = GenerateSVGContentHash('path/to/svgs/folder')
 
 module.exports = {
    // ... other webpack config 
    plugins: [ 
-   new SirSVGSprite({
+   new SimpleSVGSprite({
       svgFolderPath: 'path/to/svgs/folder',
       spriteOutput: spritemap.${svgContentHash}.svg,
     }),

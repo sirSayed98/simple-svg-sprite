@@ -8,7 +8,7 @@ const DOMParser = new xmldom.DOMParser();
 const XMLSerializer = new xmldom.XMLSerializer();
 const XMLDoc = new xmldom.DOMImplementation().createDocument(null, null, null);
 
-class SirSVGSprite {
+class SimpleSVGSprite {
   constructor(options) {
     if (!options || !options.svgFolderPath) {
       throw new Error("Error: 'svgFolderPath' option not passed.");
@@ -24,7 +24,7 @@ class SirSVGSprite {
   }
 
   apply(compiler) {
-    compiler.hooks.emit.tapAsync("SirSVGSprite", (compilation, callback) => {
+    compiler.hooks.emit.tapAsync("SimpleSVGSprite", (compilation, callback) => {
       this.generateSvgSprite()
         .then(() => {
           compilation.emitAsset(
@@ -142,4 +142,4 @@ const GenerateSVGContentHash = (content) => {
   return data.digest("hex");
 };
 
-module.exports = { SirSVGSprite, GenerateSVGContentHash };
+module.exports = { SimpleSVGSprite, GenerateSVGContentHash };
